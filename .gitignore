@@ -13,3 +13,33 @@ Desktop.ini
 dist/
 tmp/
 output/
+
+# --- Secrets: never commit ---
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+*.jks
+*.keystore
+id_rsa*
+id_ed25519*
+id_ecdsa*
+secrets.*
+*.secret
+credentials*.json
+service-account*.json
+
+# --- Local overrides / agent state ---
+.workbuddy/
+.claude/
+local.settings.json
+
+# --- Security notes: exclude live targets and captured data ---
+*.pcap
+*.pcapng
+*.har
+loot/
+captures/
